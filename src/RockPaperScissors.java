@@ -45,6 +45,12 @@ public class RockPaperScissors {
             } else {
                 System.out.println("You lose!");
             }
+        } else if (choices[userChoice].equals("scissors")) {
+            if (choices[computerChoice].equals("paper")) {
+                System.out.println("You win!");
+            } else {
+                System.out.println("You lose!");
+            }
         }
 
 
