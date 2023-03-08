@@ -8,13 +8,12 @@ public class RockPaperScissors {
         int userChoice = Integer.parseInt(System.console().readLine());
 
 
-        //get computer choice randomly
+        //get computer choice randomly with nextInt()
         int computerChoice = (int) (Math.random() * 3);
 
         //new line and say countdown is starting
         System.out.println("\n");
         System.out.println("Countdown: ");
-
 
         //count down from 3 to 1
         for (int i = 3; i > 0; i--) {
