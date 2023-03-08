@@ -3,11 +3,24 @@ public class RockPaperScissors {
         //make array of rock, paper, scissors
         String[] choices = {"rock", "paper", "scissors"};
 
-        //tell user to pick a choice and enter index
+        //tell user to pick a choice and enter index from 0 to 2
         System.out.println("Pick a choice: ");
-        int userChoice = Integer.parseInt(System.console().readLine());
 
+        //initialize int to store user's choice
+        int userChoice = 0;
 
+        //if user enters invalid index, tell them to pick again with while loop
+        while (true) {
+            //get user input and parse to int
+            userChoice = Integer.parseInt(System.console().readLine());
+
+            if (userChoice < 0 || userChoice > 2) {
+                System.out.println("Invalid choice, pick again: ");
+            } else {
+                break;
+            }
+        }
+        
         //get computer choice randomly with nextInt()
         int computerChoice = (int) (Math.random() * 3);
 
